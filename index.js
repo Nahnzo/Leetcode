@@ -15,3 +15,68 @@ var findMedianSortedArrays = function (nums1, nums2) {
     return combinedNums[midIdx];
   }
 };
+// 3.Two Sum
+var twoSum = function (nums, target) {
+  let result = [];
+  for (let i = 0; i < nums.length - 1; i++) {
+    for (let j = i + 1; j < nums.length; j++) {
+      if (nums[i] + nums[j] === target) {
+        result.push(i, j);
+      }
+    }
+  }
+  return result;
+};
+// 4.Contains Duplicate
+var containsDuplicate = function (nums) {
+  const set = new Set();
+
+  for (let i = 0; i < nums.length; i++) {
+    if (set.has(nums[i])) {
+      return true;
+    }
+
+    set.add(nums[i]);
+  }
+
+  return false;
+};
+
+// 5.Counter
+var createCounter = function (n) {
+  let counter = n;
+  return function () {
+    return counter++;
+  };
+};
+// 6.Create Hello World Function
+var createHelloWorld = function () {
+  return function (...args) {
+    return "Hello World";
+  };
+};
+// 7.Return Length of Arguments Passed
+var argumentsLength = function (...args) {
+  return args.length;
+};
+// 8.Sleep
+async function sleep(millis) {
+  await new Promise((resolve) => setTimeout(resolve, millis));
+}
+
+// 9.Array Prototype Last
+Array.prototype.last = function () {
+  if (this.length === 0) {
+    return -1;
+  } else {
+    return this[this.length - 1];
+  }
+};
+// 10.Array Reduce Transformation
+var reduce = function (nums, fn, init) {
+  if (nums.length === 0) {
+    return init;
+  } else {
+    return nums.reduce(fn, init);
+  }
+};
