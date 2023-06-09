@@ -80,3 +80,14 @@ var reduce = function (nums, fn, init) {
     return nums.reduce(fn, init);
   }
 };
+// 11.Generate Parentheses
+
+var generateParenthesis = function (n) {};
+// 12.Rotate Image
+var rotate = function (matrix) {};
+
+var getConcatenation = function (nums) {
+  let arr = nums.slice();
+  console.log(nums.concat(arr));
+};
+getConcatenation([1, 3, 2, 1]);
