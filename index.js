@@ -80,14 +80,20 @@ var reduce = function (nums, fn, init) {
     return nums.reduce(fn, init);
   }
 };
-// 11.Generate Parentheses
 
-var generateParenthesis = function (n) {};
-// 12.Rotate Image
-var rotate = function (matrix) {};
-
+// 11.getConcatenation
 var getConcatenation = function (nums) {
   let arr = nums.slice();
-  console.log(nums.concat(arr));
+  return nums.concat(arr);
 };
-getConcatenation([1, 3, 2, 1]);
+// 12.defangIPaddr
+var defangIPaddr = function (address) {
+  let array = address.split("");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] == ".") {
+      array[i - 1] += "[";
+      array[i] += "]";
+    }
+  }
+  return array.join("");
+};
