@@ -97,3 +97,8 @@ var defangIPaddr = function (address) {
   }
   return array.join("");
 };
+// 13.isEmpty
+var isEmpty = function (obj) {
+  if (Object.keys(obj).length) return false;
+  else return true;
+};
