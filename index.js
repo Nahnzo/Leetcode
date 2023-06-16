@@ -102,3 +102,7 @@ var isEmpty = function (obj) {
   if (Object.keys(obj).length) return false;
   else return true;
 };
+// 14.Flatten Deeply Nested Array
+var flat = function (arr, n) {
+  return arr.flat(n);
+};
