@@ -106,3 +106,13 @@ var isEmpty = function (obj) {
 var flat = function (arr, n) {
   return arr.flat(n);
 };
+// 15.addTwoPromises
+var addTwoPromises = async function (promise1, promise2) {
+  try {
+    const [res1, res2] = await Promise.all([promise1, promise2]);
+    return res1 + res2;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
