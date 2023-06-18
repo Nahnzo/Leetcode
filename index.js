@@ -112,7 +112,21 @@ var addTwoPromises = async function (promise1, promise2) {
     const [res1, res2] = await Promise.all([promise1, promise2]);
     return res1 + res2;
   } catch (error) {
-    console.error(error);
     throw error;
   }
+};
+// 16.once
+var once = function (fn) {
+  let hasBeenCalled = false;
+  let result;
+
+  return function (...args) {
+    if (!hasBeenCalled) {
+      result = fn(...args);
+      hasBeenCalled = true;
+      return result;
+    } else {
+      return undefined;
+    }
+  };
 };
