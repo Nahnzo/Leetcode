@@ -140,4 +140,3 @@ var chunk = function (arr, size) {
   }
   return chunkedArray;
 };
-chunk([8, 5, 3, 2, 6], 2);
