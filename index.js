@@ -140,3 +140,29 @@ var chunk = function (arr, size) {
   }
   return chunkedArray;
 };
+
+function join(arr1, arr2) {
+  const idMap = {};
+
+  for (const obj of arr1) {
+    const id = obj.id;
+    if (idMap[id]) {
+      Object.assign(idMap[id], obj);
+    } else {
+      idMap[id] = { ...obj };
+    }
+  }
+
+  for (const obj of arr2) {
+    const id = obj.id;
+    if (idMap[id]) {
+      Object.assign(idMap[id], obj);
+    } else {
+      idMap[id] = { ...obj };
+    }
+  }
+
+  const joinedArray = Object.values(idMap).sort((a, b) => a.id - b.id);
+
+  return joinedArray;
+}
