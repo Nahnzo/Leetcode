@@ -166,3 +166,7 @@ function join(arr1, arr2) {
 
   return joinedArray;
 }
+// 17.convertTemperature
+var convertTemperature = function (celsius) {
+  return [celsius + 273.15, celsius * 1.8 + 32];
+};
