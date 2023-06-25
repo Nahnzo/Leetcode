@@ -170,3 +170,13 @@ function join(arr1, arr2) {
 var convertTemperature = function (celsius) {
   return [celsius + 273.15, celsius * 1.8 + 32];
 };
+var runningSum = function (nums) {
+  let res = [];
+  let sum = 0;
+  for (let i = 0; i < nums.length; i++) {
+    sum += nums[i];
+    res.push(sum);
+  }
+  return res;
+};
+runningSum([1, 1, 1, 1, 1]);
