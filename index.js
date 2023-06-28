@@ -185,3 +185,15 @@ var runningSum = function (nums) {
 var sum = function (num1, num2) {
   return num1 + num2;
 };
+// 20.mostWordsFound
+var mostWordsFound = function (sentences) {
+  let maxCount = 0;
+  for (let i = 0; i < sentences.length; i++) {
+    const words = sentences[i].split(" ");
+    const wordCount = words.length;
+    if (wordCount > maxCount) {
+      maxCount = wordCount;
+    }
+  }
+  return maxCount;
+};
