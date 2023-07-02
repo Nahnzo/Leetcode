@@ -15,7 +15,7 @@ var findMedianSortedArrays = function (nums1, nums2) {
     return combinedNums[midIdx];
   }
 };
-// 3.Two Sum
+// 3.Twо Sum
 var twoSum = function (nums, target) {
   let result = [];
   for (let i = 0; i < nums.length - 1; i++) {
