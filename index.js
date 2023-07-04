@@ -211,3 +211,6 @@ var finalValueAfterOperations = function (operations) {
   }
   return count;
 };
+console.log(1);
+console.log(1);
+console.log(1);
