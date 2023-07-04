@@ -211,6 +211,8 @@ var finalValueAfterOperations = function (operations) {
   }
   return count;
 };
-console.log(1);
-console.log(1);
-console.log(1);
+// 22.maximumWealth
+var maximumWealth = function (accounts) {
+  let arrays = accounts.map((item) => item.reduce((cur, total) => cur + total, 0));
+  return Math.max(...arrays);
+};
