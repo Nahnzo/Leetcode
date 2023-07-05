@@ -216,3 +216,13 @@ var maximumWealth = function (accounts) {
   let arrays = accounts.map((item) => item.reduce((cur, total) => cur + total, 0));
   return Math.max(...arrays);
 };
+// 23.differenceOfSum
+var differenceOfSum = function (nums) {
+  let number1 = nums.reduce((cur, tot) => cur + tot, 0);
+  let number2 = nums
+    .join("")
+    .split("")
+    .map((item) => Number(item))
+    .reduce((cur, tot) => cur + tot, 0);
+  return number1 - number2;
+};
