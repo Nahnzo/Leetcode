@@ -226,3 +226,17 @@ var differenceOfSum = function (nums) {
     .reduce((cur, tot) => cur + tot, 0);
   return number1 - number2;
 };
+// 24.subtractProductAndSum
+var subtractProductAndSum = function (n) {
+  let array = [];
+  array.push(n);
+  let sum = array
+    .join("")
+    .split("")
+    .reduce((cur, tot) => cur * tot);
+  let sum1 = array
+    .join("")
+    .split("")
+    .reduce((cur, tot) => +cur + +tot);
+  return sum - sum1;
+};
