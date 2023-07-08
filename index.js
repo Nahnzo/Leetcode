@@ -240,3 +240,7 @@ var subtractProductAndSum = function (n) {
     .reduce((cur, tot) => +cur + +tot);
   return sum - sum1;
 };
+// 24.numberOfMatches
+var numberOfMatches = function (n) {
+  return n - 1;
+};
