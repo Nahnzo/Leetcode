@@ -244,3 +244,7 @@ var subtractProductAndSum = function (n) {
 var numberOfMatches = function (n) {
   return n - 1;
 };
+// 25.toLowerCase
+var toLowerCase = function (s) {
+  return s.toLowerCase();
+};
