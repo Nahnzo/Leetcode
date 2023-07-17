@@ -248,3 +248,12 @@ var numberOfMatches = function (n) {
 var toLowerCase = function (s) {
   return s.toLowerCase();
 };
+// 26.reverseWords
+var reverseWords = function (s) {
+  const words = s.split(" ");
+  const reversedWords = words.map((word) => {
+    return word.split("").reverse().join("");
+  });
+  const result = reversedWords.join(" ");
+  return result;
+};
