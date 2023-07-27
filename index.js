@@ -257,3 +257,10 @@ var reverseWords = function (s) {
   const result = reversedWords.join(" ");
   return result;
 };
+// 27.addTwoPromises
+var addTwoPromises = async function (promise1, promise2) {
+  return Promise.all([promise1, promise2]).then(([result1, result2]) => {
+    const sum = result1 + result2;
+    return Promise.resolve(sum);
+  });
+};
