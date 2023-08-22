@@ -264,13 +264,7 @@ var addTwoPromises = async function (promise1, promise2) {
     return Promise.resolve(sum);
   });
 };
-function countJewelsInStones(J, S) {
-  let count = 0;
-  for (let stone of S) {
-    if (J.includes(stone)) {
-      count++;
-    }
-  }
-  console.log(count);
-}
-countJewelsInStones("ab", "aabbcs");
+//28.reverseString
+var reverseString = function (s) {
+  return s.reverse();
+};
