@@ -268,3 +268,8 @@ var addTwoPromises = async function (promise1, promise2) {
 var reverseString = function (s) {
   return s.reverse();
 };
+// 29.Length of Last Word
+var lengthOfLastWord = function (s) {
+  const res = s.trim().split(" ");
+  return res[res.length - 1].length;
+};
