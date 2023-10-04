@@ -273,3 +273,7 @@ var lengthOfLastWord = function (s) {
   const res = s.trim().split(" ");
   return res[res.length - 1].length;
 };
+// 30 Sqrt(x)
+var mySqrt = function (x) {
+  return Math.floor(Math.sqrt(x));
+};
