@@ -277,3 +277,7 @@ var lengthOfLastWord = function (s) {
 var mySqrt = function (x) {
   return Math.floor(Math.sqrt(x));
 };
+// 31 Array Prototype Last
+Array.prototype.last = function () {
+  return this.length ? this[this.length - 1] : -1;
+};
