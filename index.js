@@ -281,3 +281,14 @@ var mySqrt = function (x) {
 Array.prototype.last = function () {
   return this.length ? this[this.length - 1] : -1;
 };
+var expect = function (val) {
+  return {
+    toBe(number) {
+      return number === val ? true : false;
+    },
+    notToBe(number) {
+      return number !== val;
+    },
+  };
+};
+console.log(expect(5).toBe(null));
