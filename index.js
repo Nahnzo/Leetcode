@@ -281,14 +281,32 @@ var mySqrt = function (x) {
 Array.prototype.last = function () {
   return this.length ? this[this.length - 1] : -1;
 };
+// 32 To Be Or Not To Be
 var expect = function (val) {
   return {
     toBe(number) {
-      return number === val ? true : false;
+      return number === val
+        ? true
+        : (() => {
+            throw new Error("Not Equal");
+          })();
     },
     notToBe(number) {
-      return number !== val;
+      return number !== val
+        ? true
+        : (() => {
+            throw new Error("Equal");
+          })();
     },
   };
 };
-console.log(expect(5).toBe(null));
+// 33 Filter Elements from Array
+var filter = function (arr, fn) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (fn(arr[i], i)) {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr;
+};
