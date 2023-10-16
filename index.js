@@ -310,12 +310,23 @@ var filter = function (arr, fn) {
   }
   return newArr;
 };
+// 34 Valid Palindrome
 var isPalindrome = function (s) {
-  let reversed = s
-    .split(" ")
-    .join()
-    .toLowerCase()
-    .replace(/[!@#$%^&*,:]/g, "");
-  return reversed == s.split(" ").reverse().join();
+  s = s.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return s === s.split("").reverse().join("");
 };
-console.log(isPalindrome("A man, a plan, a canal: Panama"));
+
+// 35 Jump Game
+var canJump = function (nums) {
+  let maxReach = 0;
+  for (let i = 0; i < nums.length; i++) {
+    if (i > maxReach) {
+      return false;
+    }
+    maxReach = Math.max(maxReach, i + nums[i]);
+    if (maxReach >= nums.length - 1) {
+      return true;
+    }
+  }
+  return false;
+};
