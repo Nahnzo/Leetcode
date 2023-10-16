@@ -310,3 +310,12 @@ var filter = function (arr, fn) {
   }
   return newArr;
 };
+var isPalindrome = function (s) {
+  let reversed = s
+    .split(" ")
+    .join()
+    .toLowerCase()
+    .replace(/[!@#$%^&*,:]/g, "");
+  return reversed == s.split(" ").reverse().join();
+};
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
