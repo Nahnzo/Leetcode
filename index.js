@@ -330,7 +330,7 @@ var canJump = function (nums) {
   }
   return false;
 };
-
+// 36 Find the Index of the First Occurrence in a String
 var strStr = function (haystack, needle) {
   if (needle === "") {
     return 0;
@@ -342,3 +342,15 @@ var strStr = function (haystack, needle) {
   }
   return -1;
 };
+var searchInsert = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === target) {
+      return i;
+    } else {
+      let res = nums.filter((item) => item < target);
+      res.push(target);
+      return res.indexOf(target);
+    }
+  }
+};
+console.log(searchInsert([3, 6, 7, 8, 10], 9));
