@@ -342,6 +342,7 @@ var strStr = function (haystack, needle) {
   }
   return -1;
 };
+// 36 Search Insert Position
 var searchInsert = function (nums, target) {
   for (let i = 0; i < nums.length; i++) {
     if (nums[i] === target) {
@@ -353,4 +354,7 @@ var searchInsert = function (nums, target) {
     }
   }
 };
-console.log(searchInsert([3, 6, 7, 8, 10], 9));
+// 37 Single Number
+var singleNumber = function (nums) {
+  return nums.filter((el, i, arr) => arr.indexOf(el) === arr.lastIndexOf(el));
+};
