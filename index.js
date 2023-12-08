@@ -358,3 +358,17 @@ var searchInsert = function (nums, target) {
 var singleNumber = function (nums) {
   return nums.filter((el, i, arr) => arr.indexOf(el) === arr.lastIndexOf(el));
 };
+// 38 plusOne
+var plusOne = function (digits) {
+  const length = digits.length;
+  for (let i = length - 1; i >= 0; i--) {
+    if (digits[i] !== 9) {
+      digits[i] += 1;
+      return digits;
+    } else {
+      digits[i] = 0;
+    }
+  }
+  digits.unshift(1);
+  return digits;
+};
